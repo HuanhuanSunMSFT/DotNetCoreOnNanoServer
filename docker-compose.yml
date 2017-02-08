@@ -1,0 +1,12 @@
+version: '2.1'
+
+services:
+  dotnetcoreweb:
+    image: dotnetcoreweb
+    build:
+      context: ./DotNetCoreWeb
+      dockerfile: Dockerfile
+networks:
+  default:
+    external:
+      name: nat
