@@ -10,7 +10,7 @@ services:
       - DOTNET_USE_POLLING_FILE_WATCHER=1
     volumes:
       - .\DotNetCoreWeb:C:\app
-      - ~\.nuget\packages:c:\nuget\packages:ro
+      - ~\.nuget\packages:c:\.nuget\packages:ro
       - ${ONECOREMSVSMON_PATH}:C:\onecoremsvsmon:ro
     entrypoint: powershell -Command [System.Threading.Thread]::Sleep([System.Threading.Timeout]::Infinite)
     labels:
