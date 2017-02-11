@@ -12,4 +12,5 @@ services:
       - ${ONECOREMSVSMON_PATH}:C:\onecoremsvsmon:ro
     entrypoint: powershell -Command [System.Threading.Thread]::Sleep([System.Threading.Timeout]::Infinite)
     labels:
-      - "com.microsoft.visualstudio.targetoperatingsystem=nanoserver"
+      - "com.microsoft.visualstudio.targetoperatingsystem=windows"
+      - "com.microsoft.visualstudio.targetframework=dotnetcore"
